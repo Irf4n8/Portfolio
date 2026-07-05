@@ -592,10 +592,11 @@ window.addEventListener('load', updatePageGap);
 // Function for robust smooth scrolling with offset
 function scrollToSection(targetId) {
   const targetSection = document.querySelector(targetId);
+  const nav = document.querySelector('nav');
   if (targetSection) {
-    // 90px offset for sticky navigation bar spacing
-    const offset = 90;
-    const elementPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+    const navHeight = nav ? nav.offsetHeight : 80;
+    const offset = navHeight + 16; // height + spacing buffer
+    const elementPosition = targetSection.getBoundingClientRect().top + window.scrollY;
     const offsetPosition = elementPosition - offset;
 
     window.scrollTo({
@@ -629,27 +630,31 @@ document.querySelectorAll('nav a, nav .logo').forEach(link => {
 
 // Smart sticky navigation (reveal on scroll up)
 const navElement = document.querySelector('nav');
-let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
-const scrollThreshold = 150; // don't hide until scrolled down 150px
+let lastScrollY = window.scrollY || document.documentElement.scrollTop;
+let isScrolling = false;
 
 function handleSmartNav() {
-  const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
-  
-  // Clamp to 0 to prevent negative scroll bounce values on iOS/Safari
+  const currentScrollY = window.scrollY || document.documentElement.scrollTop;
   const clampedScrollY = Math.max(currentScrollY, 0);
 
-  if (clampedScrollY < scrollThreshold) {
-    // Always show at the top of the page
+  if (clampedScrollY <= 0) {
+    // Always show at the very top of the page
     navElement.classList.remove('nav-hidden');
-  } else if (clampedScrollY > lastScrollY) {
+  } else if (clampedScrollY > lastScrollY && clampedScrollY > 150) {
     // Scrolling down -> hide nav
     navElement.classList.add('nav-hidden');
   } else if (clampedScrollY < lastScrollY) {
-    // Scrolling up -> show nav
+    // Scrolling up -> show nav immediately
     navElement.classList.remove('nav-hidden');
   }
 
   lastScrollY = clampedScrollY;
+  isScrolling = false;
 }
 
-window.addEventListener('scroll', handleSmartNav, { passive: true });
+window.addEventListener('scroll', () => {
+  if (!isScrolling) {
+    window.requestAnimationFrame(handleSmartNav);
+    isScrolling = true;
+  }
+}, { passive: true });
