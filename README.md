@@ -134,5 +134,5 @@ portfolio/
 I'm a Computer Science Engineering graduate from Coimbatore, Tamil Nadu, currently seeking full-stack and backend engineering roles while continuously picking up new skills. This portfolio reflects both my technical background and my willingness to step outside my comfort zone to learn frontend design and animation work.
 
 - **GitHub:** [Irf4n8](https://github.com/Irf4n8)
-- **LinkedIn:** *[Add your LinkedIn link]*
+- **LinkedIn:** https://www.linkedin.com/in/mohammedirfan24/
 - **Email:** mohammedirfan24082004@gmail.com
