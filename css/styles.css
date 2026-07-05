@@ -1805,11 +1805,16 @@ h2.sec-title {
 }
 
 .skill-extra-card {
-  background: var(--card-bg);
-  border: 3.5px solid var(--card-border);
+  background: var(--yellow);
+  border: 3.5px solid #000000 !important;
   box-shadow: 6px 6px 0px var(--shadow-color, var(--card-shadow-default));
   padding: 24px 20px;
   border-radius: 0px;
+  color: #000000 !important;
+}
+
+.skill-extra-card.accent-pink {
+  background: var(--pink);
 }
 
 .extra-card-head {
@@ -1906,8 +1911,8 @@ body[data-theme="light"] .project-section-title {
 .project-neo-card {
   width: 100%;
   height: 110px;
-  background: var(--card-bg);
-  border: 3.5px solid var(--card-border);
+  background: var(--yellow);
+  border: 3.5px solid #000000 !important;
   box-shadow: 6px 6px 0px var(--shadow-color, var(--card-shadow-default));
   display: flex;
   align-items: center;
@@ -1915,6 +1920,10 @@ body[data-theme="light"] .project-section-title {
   gap: 20px;
   margin-bottom: 20px;
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+}
+
+.project-neo-card.accent-pink {
+  background: var(--pink);
 }
 
 .project-neo-card:hover {
@@ -2422,13 +2431,6 @@ body[data-theme="light"] {
   --shadow-mint: #000000;
   --shadow-pink: #000000;
   --shadow-blue: #000000;
-}
-
-body[data-theme="light"] .skill-extra-card {
-  background: var(--yellow) !important;
-}
-body[data-theme="light"] .project-neo-card {
-  background: var(--yellow) !important;
 }
 
 /* ---------- CONTACT STICKY NOTES ---------- */
