@@ -335,15 +335,15 @@ body[data-theme="light"] .tear-tape-sticker {
 
 /* ---------- NEO-BRUTALIST LAYERED SHADOW CARDS ---------- */
 .card-shadow {
-  background: var(--card-bg) !important;
-  border: 3.5px solid var(--card-border) !important;
+  background: var(--card-bg);
+  border: 3.5px solid var(--card-border);
   border-radius: 0px !important;
-  box-shadow: 6px 6px 0px var(--shadow-color, var(--card-shadow-default)) !important;
-  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease !important;
+  box-shadow: 6px 6px 0px var(--shadow-color, var(--card-shadow-default));
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
 }
 
 .card-shadow:hover {
-  transform: translate(3px, 3px) !important;
+  transform: translate(3px, 3px);
   box-shadow: 3px 3px 0px var(--shadow-color, var(--card-shadow-default)) !important;
 }
 
