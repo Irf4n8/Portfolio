@@ -125,7 +125,7 @@ portfolio/
 
 ## Deployment
 
-- **Live URL:** *[Pending Deployment — will be added once hosted]*
+- **Live URL:** https://irf4n.vercel.app/
 
 ---
 
