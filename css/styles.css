@@ -17,6 +17,15 @@
   --display: 'Space Grotesk', sans-serif;
   --mono: 'JetBrains Mono', monospace;
   --sans: 'Inter', sans-serif;
+
+  /* Card Layered Shadow System Variables */
+  --card-bg: #1A1A1A;
+  --card-border: var(--border);
+  --card-shadow-default: #353535;
+  --shadow-yellow: #806600; /* Dark Mustard */
+  --shadow-mint: #00664D;   /* Dark Teal */
+  --shadow-pink: #731A3B;   /* Dark Pink */
+  --shadow-blue: #144573;   /* Dark Blue */
 }
 
 * {
@@ -318,10 +327,38 @@ body[data-theme="light"] .tear-tape-sticker {
 }
 
 .card {
-  background: var(--panel);
-  border: 2px solid var(--mint);
-  border-radius: 16px;
+  background: var(--card-bg);
+  border: 3.5px solid var(--card-border);
+  border-radius: 0px;
   padding: 32px;
+}
+
+/* ---------- NEO-BRUTALIST LAYERED SHADOW CARDS ---------- */
+.card-shadow {
+  background: var(--card-bg) !important;
+  border: 3.5px solid var(--card-border) !important;
+  border-radius: 0px !important;
+  box-shadow: 6px 6px 0px var(--shadow-color, var(--card-shadow-default)) !important;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease !important;
+}
+
+.card-shadow:hover {
+  transform: translate(3px, 3px) !important;
+  box-shadow: 3px 3px 0px var(--shadow-color, var(--card-shadow-default)) !important;
+}
+
+/* Specific Accent Shadows */
+.card-shadow.accent-yellow {
+  --shadow-color: var(--shadow-yellow);
+}
+.card-shadow.accent-mint {
+  --shadow-color: var(--shadow-mint);
+}
+.card-shadow.accent-pink {
+  --shadow-color: var(--shadow-pink);
+}
+.card-shadow.accent-blue {
+  --shadow-color: var(--shadow-blue);
 }
 
 .hlx {
@@ -1643,11 +1680,7 @@ h2.sec-title {
 }
 
 .skill-group {
-  background: var(--panel);
-  border: 3px solid var(--border);
-  border-radius: 0px;
   padding: 24px 20px;
-  box-shadow: 6px 6px 0 var(--border);
 }
 
 .sg-head {
@@ -1685,24 +1718,30 @@ h2.sec-title {
   font-weight: 700;
   color: var(--white);
   background: var(--panel-2);
-  border: 2.5px solid var(--border);
+  border: 2.5px solid var(--card-border);
   padding: 8px 14px;
   border-radius: 4px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s;
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.15s ease, background-color 0.15s;
   cursor: pointer;
   user-select: none;
-  box-shadow: 3.5px 3.5px 0 var(--border);
+  box-shadow: 3.5px 3.5px 0px var(--chip-shadow, var(--card-shadow-default));
 }
 
 .chip:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 5.5px 5.5px 0 var(--border);
+  transform: translate(1.5px, 1.5px);
+  box-shadow: 2px 2px 0px var(--chip-shadow, var(--card-shadow-default)) !important;
 }
 
 .chip:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1.5px 1.5px 0 var(--border);
+  transform: translate(3.5px, 3.5px);
+  box-shadow: 0px 0px 0px var(--chip-shadow, var(--card-shadow-default)) !important;
 }
+
+/* Auto Accent chip shadows inside accent-styled containers */
+.accent-blue .chip { --chip-shadow: var(--shadow-blue); }
+.accent-yellow .chip { --chip-shadow: var(--shadow-yellow); }
+.accent-mint .chip { --chip-shadow: var(--shadow-mint); }
+.accent-pink .chip { --chip-shadow: var(--shadow-pink); }
 
 /* Category-specific light background hover states */
 .skill-group:nth-child(1) .chip:hover {
@@ -1766,9 +1805,9 @@ h2.sec-title {
 }
 
 .skill-extra-card {
-  background: var(--yellow);
-  border: 3.5px solid #000000;
-  box-shadow: 6px 6px 0 #000000;
+  background: var(--card-bg);
+  border: 3.5px solid var(--card-border);
+  box-shadow: 6px 6px 0px var(--shadow-color, var(--card-shadow-default));
   padding: 24px 20px;
   border-radius: 0px;
 }
@@ -1867,20 +1906,20 @@ body[data-theme="light"] .project-section-title {
 .project-neo-card {
   width: 100%;
   height: 110px;
-  background: var(--yellow);
-  border: 3.5px solid #000000;
-  box-shadow: 6px 6px 0 #000000;
+  background: var(--card-bg);
+  border: 3.5px solid var(--card-border);
+  box-shadow: 6px 6px 0px var(--shadow-color, var(--card-shadow-default));
   display: flex;
   align-items: center;
   padding: 0 30px;
   gap: 20px;
   margin-bottom: 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
 }
 
 .project-neo-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0 #000000;
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0px var(--shadow-color, var(--card-shadow-default)) !important;
 }
 
 .project-neo-icon {
@@ -2374,6 +2413,22 @@ body[data-theme="light"] {
   --muted: #4A4A4A;
   --muted-2: #5E5E5E;
   --border: #0D0D0D;
+
+  /* Card Layered Shadow overrides for light theme */
+  --card-bg: #FFFFFF;
+  --card-border: #000000;
+  --card-shadow-default: #000000;
+  --shadow-yellow: #000000;
+  --shadow-mint: #000000;
+  --shadow-pink: #000000;
+  --shadow-blue: #000000;
+}
+
+body[data-theme="light"] .skill-extra-card {
+  background: var(--yellow) !important;
+}
+body[data-theme="light"] .project-neo-card {
+  background: var(--yellow) !important;
 }
 
 /* ---------- CONTACT STICKY NOTES ---------- */
