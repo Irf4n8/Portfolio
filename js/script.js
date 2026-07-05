@@ -658,3 +658,33 @@ window.addEventListener('scroll', () => {
     isScrolling = true;
   }
 }, { passive: true });
+
+// Mobile Hamburger Navigation Controller
+(function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navlinks = document.querySelector('.navlinks');
+  
+  if (navToggle && navlinks) {
+    navToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navToggle.classList.toggle('active');
+      navlinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside of nav
+    document.addEventListener('click', (e) => {
+      if (!navlinks.contains(e.target) && !navToggle.contains(e.target)) {
+        navToggle.classList.remove('active');
+        navlinks.classList.remove('active');
+      }
+    });
+
+    // Close menu when clicking links
+    navlinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navlinks.classList.remove('active');
+      });
+    });
+  }
+})();

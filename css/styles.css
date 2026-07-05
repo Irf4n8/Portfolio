@@ -26,6 +26,9 @@
   --shadow-mint: #00664D;   /* Dark Teal */
   --shadow-pink: #731A3B;   /* Dark Pink */
   --shadow-blue: #144573;   /* Dark Blue */
+  
+  /* Navigation Background Variable */
+  --nav-bg: rgba(13, 13, 13, 0.98);
 }
 
 * {
@@ -2431,6 +2434,9 @@ body[data-theme="light"] {
   --shadow-mint: #000000;
   --shadow-pink: #000000;
   --shadow-blue: #000000;
+
+  /* Light Mode Navigation Dropdown background */
+  --nav-bg: #FFD93D;
 }
 
 /* ---------- CONTACT STICKY NOTES ---------- */
@@ -3141,4 +3147,196 @@ body[data-theme="dark"] .ink-toggle-btn .bottle-label {
 /* ---------- SCROLL ANCHOR MARGIN OFFSETS ---------- */
 #about, #journey, #skills, #projects, #project-agritwin, #project-travelx, #contact {
   scroll-margin-top: 110px;
+}
+
+/* ---------- RESPONSIVE HAMBURGER & MOBILE DROPDOWN ---------- */
+.nav-toggle {
+  display: none;
+  background: var(--yellow);
+  border: 3.5px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  z-index: 100;
+}
+
+body[data-theme="light"] .nav-toggle {
+  background: #5AC8E8 !important; /* light blue button in light mode */
+  border-color: #000000 !important;
+  box-shadow: 3px 3px 0 #000000 !important;
+}
+
+.nav-toggle:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--border);
+}
+
+.hamburger {
+  position: relative;
+  width: 20px;
+  height: 3px;
+  background: var(--border);
+  transition: background 0.2s ease;
+}
+
+body[data-theme="light"] .hamburger,
+body[data-theme="light"] .hamburger::before,
+body[data-theme="light"] .hamburger::after {
+  background: #000000 !important;
+}
+
+.hamburger::before, .hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  background: var(--border);
+  transition: transform 0.25s ease, top 0.25s ease;
+}
+
+.hamburger::before {
+  top: -7px;
+}
+
+.hamburger::after {
+  top: 7px;
+}
+
+/* Toggle Open State */
+.nav-toggle.active .hamburger {
+  background: transparent !important;
+}
+
+.nav-toggle.active .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.nav-toggle.active .hamburger::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+@media (max-width: 768px) {
+  /* Prevent horizontal scrolling layout-wide */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  body {
+    padding: 12px;
+  }
+
+  /* Page Frame mobile shadow reduction */
+  .page-frame {
+    box-shadow: 8px 8px 0 var(--border) !important;
+    margin: 8px auto 24px;
+    width: 100%;
+  }
+
+  .page-frame.first-frame {
+    box-shadow: 8px 0 0 var(--border) !important;
+  }
+
+  body[data-theme="light"] .page-frame {
+    box-shadow: 8px 8px 0 #000000 !important;
+  }
+
+  body[data-theme="light"] .page-frame.first-frame {
+    box-shadow: 8px 0 0 #000000 !important;
+  }
+
+  /* Sticky Navigation mobile dropdown */
+  nav {
+    width: calc(100% - 24px); /* fits viewport margins */
+    top: 12px;
+    margin: 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--nav-bg);
+    border-top: 3.5px solid var(--border);
+    padding: 24px 20px;
+    gap: 16px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    z-index: 99;
+  }
+
+  body[data-theme="light"] .navlinks {
+    border-top-color: #000000 !important;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  }
+
+  .navlinks.active {
+    display: flex;
+  }
+
+  .navlinks a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .navlinks .cta, .navlinks .nav-pill {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Scale Down Section titles */
+  h2.sec-title {
+    font-size: clamp(26px, 5.5vw, 32px);
+    text-align: center;
+  }
+
+  /* Journey section height adjustments */
+  .journey-timeline, 
+  .journey-map-container, 
+  #journey-map {
+    height: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Profile stage card scaling */
+  .avatar-ring, .avatar-backer {
+    width: 270px;
+    height: 270px;
+  }
+  .avatar-stage {
+    height: 320px;
+  }
+  
+  /* Buttons stacking on small mobile */
+  .cta-row {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .cta-row .btn {
+    text-align: center;
+    justify-content: center;
+  }
 }
