@@ -688,3 +688,58 @@ window.addEventListener('scroll', () => {
     });
   }
 })();
+
+// Mobile recommendation popup controller
+(function() {
+  const toast = document.getElementById('mobile-toast');
+  if (!toast) return;
+
+  // 1. Detect if the screen is mobile width
+  const isMobileWidth = window.innerWidth <= 768;
+  
+  // 2. Detect if it has touch support or a mobile user-agent to prevent triggering on small desktop windows
+  const isMobileClient = (
+    'ontouchstart' in window || 
+    navigator.maxTouchPoints > 0 || 
+    /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+  );
+
+  // 3. Detect if it hasn't been shown in the current tab session
+  const isFreshSession = sessionStorage.getItem('mobile-toast-shown') === null;
+
+  if (isMobileWidth && isMobileClient && isFreshSession) {
+    // Flag that we are showing it
+    sessionStorage.setItem('mobile-toast-shown', 'true');
+
+    // Make container active but transparent/slid out
+    toast.style.display = 'block';
+
+    // Slide it in smoothly after a short delay
+    const showTimeout = setTimeout(() => {
+      toast.classList.add('visible');
+      toast.removeAttribute('aria-hidden');
+    }, 1000);
+
+    // Auto dismiss after 5 seconds
+    const dismissTimeout = setTimeout(dismissToast, 6000); // 1s delay + 5s stay
+
+    // Dismiss trigger function
+    function dismissToast() {
+      clearTimeout(dismissTimeout);
+      clearTimeout(showTimeout);
+      toast.classList.remove('visible');
+      toast.setAttribute('aria-hidden', 'true');
+      
+      // Wait for slide-out transition to finish before hiding display
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 400);
+    }
+
+    // Manual close listener
+    const closeBtn = toast.querySelector('.toast-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', dismissToast);
+    }
+  }
+})();
