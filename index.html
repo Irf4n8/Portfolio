@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammed Irfan | Full Stack Engineer</title>
+  <meta name="description" content="Portfolio of Mohammed Irfan, Computer Science Engineering graduate, Coimbatore, India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body class="is-loading">
+
+  <div id="loader">
+    <div class="loader-float lf-1">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2">
+        <path d="M8 6L4 12l4 6M16 6l4 6-4 6"/>
+      </svg>
+    </div>
+    <div class="loader-float lf-2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2">
+        <rect x="3" y="4" width="18" height="16" rx="2"/>
+        <path d="M7 9l3 3-3 3M13 15h4"/>
+      </svg>
+    </div>
+    <div class="loader-float lf-3">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2">
+        <path d="M5 4h11l3 3v13H5V4z"/>
+        <path d="M8 4v5h7V4M8 14h8v6H8v-6z"/>
+      </svg>
+    </div>
+    <div class="loader-mark">
+      <div class="loader-letter l-m">M</div>
+      <div class="loader-letter l-i">I</div>
+    </div>
+    <div class="loader-bar-track">
+      <div class="loader-bar-fill"></div>
+    </div>
+  </div>
+
+  <div class="top-strip">
+    <div class="top-strip-fill"></div>
+    <span class="checkpoint" data-pct="2" data-target="#hero" title="I am Mohammed Irfan"></span>
+    <span class="checkpoint" data-pct="20" data-target="#about" title="About"></span>
+    <span class="checkpoint" data-pct="40" data-target="#journey" title="Journey"></span>
+    <span class="checkpoint" data-pct="60" data-target="#skills" title="Skills"></span>
+    <span class="checkpoint" data-pct="80" data-target="#projects" title="Projects"></span>
+    <span class="checkpoint" data-pct="100" data-target="#contact" title="Get in Touch"></span>
+  </div>
+  <div class="page-frame first-frame">
+
+    <nav>
+      <div class="wrap">
+        <a href="#hero" class="logo" style="text-decoration: none;">MI</a>
+        <div class="navlinks">
+          <a href="#about">About</a>
+          <a href="#journey">Journey</a>
+          <a href="#skills">Skills</a>
+          <a href="#project-agritwin" class="nav-pill">AgriTwin</a>
+          <a href="#project-travelx" class="nav-pill">Travel-X</a>
+          <a href="#contact" class="cta">Get in Touch!</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" id="hero">
+      <div class="wrap hero-grid" style="margin-bottom: 20px;">
+        <div>
+          <div class="wave">Hi there! <span class="waving-hand">👋</span></div>
+          <h1 class="name">I'm Mohammed Irfan.</h1>
+          <p class="lede" style="margin-bottom: 24px;">Based in Coimbatore, Tamil Nadu, I'm a <span class="hlx" style="white-space: nowrap;">Full Stack Engineer</span> fresh out of college. I love working with backend systems, REST APIs, and databases, and I'm passionate about turning real problems into working software. I'm currently seeking <span class="hlx pink" style="white-space: nowrap;">full-stack and backend roles,</span> while always picking up new skills along the way.</p>
+
+          <div class="social-row" style="margin-bottom: 24px;">
+            <a class="soc" href="https://github.com/Irf4n8" target="_blank" rel="noopener noreferrer" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a class="soc" href="https://www.linkedin.com/in/mohammedirfan24/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+
+          <div class="cta-row">
+            <a href="#contact" class="btn primary">Get in Touch!</a>
+            
+            <a href="https://drive.google.com/file/d/1bVGRIdBsyJ2NUNTUh9RXfrddbT-FqwiK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="resume-badge-wrapper">
+              <span class="resume-badge-text">Check out my Resume</span>
+              <svg class="resume-arrow-svg" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 27,33 C 12,50 15,85 35,88 C 55,90 62,55 52,43 C 40,28 35,58 50,78 C 65,95 105,88 135,73" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+                <path d="M 121,60 C 126,62 135,68 141,71 C 135,74 126,80 122,83 C 124,77 124,67 121,60 Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <div class="resume-circle-badge">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="avatar-stage">
+          <div class="avatar-backer"></div>
+          <div class="avatar-ring"><img src="assets/images/profile/avatar_of_Irf4n.png" alt="Mohammed Irfan" class="avatar-img"></div>
+          <div class="badge-pill">Backend Explorer</div>
+          
+          <!-- Yellow Tape (top-right) -->
+          <div class="avatar-tape" aria-hidden="true"></div>
+
+          <!-- Blue code card (top-left) -->
+          <div class="avatar-card card-code" aria-hidden="true">
+            <span>&lt;/&gt;</span>
+          </div>
+
+          <!-- Green save/floppy card (bottom-left) -->
+          <div class="avatar-card card-save" aria-hidden="true">
+            <i class="fas fa-save"></i>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Bottom Full-Width Tech Stack row! -->
+      <div class="wrap hero-stack-container">
+        <div class="hero-stack-row">
+          <span class="stack-pill"><i class="devicon-cplusplus-plain colored"></i> C++</span>
+          <span class="stack-pill"><i class="devicon-java-plain colored"></i> Java</span>
+          <span class="stack-pill"><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
+          <span class="stack-pill"><i class="fas fa-network-wired" style="color: #61DAFB;"></i> REST APIs</span>
+          <span class="stack-pill"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+          <span class="stack-pill"><i class="devicon-react-original colored"></i> React.js</span>
+          <span class="stack-pill"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+          <span class="stack-pill"><i class="devicon-docker-plain colored"></i> Docker</span>
+        </div>
+      </div>
+    </header>
+  </div><!-- /.page-frame (first) -->
+
+  <!-- Top paper tear -->
+  <div class="paper-tear paper-tear-top">
+    <svg width="100%" height="30" viewBox="0 0 1440 30" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="tear-grid-top" width="26" height="26" patternUnits="userSpaceOnUse">
+          <rect width="26" height="26" fill="var(--page-bg)"></rect>
+          <path d="M 26 0 L 0 0 0 26" fill="none" stroke="var(--grid-color)" stroke-width="1.5"></path>
+        </pattern>
+      </defs>
+      <path class="tear-shadow" d="M0,30 L0,15 Q10,5 20,15 T40,15 Q50,5 60,15 T80,15 Q90,5 100,15 T120,15 Q130,5 140,15 T160,15 Q170,5 180,15 Q190,5 200,15 T220,15 Q230,5 240,15 T260,15 Q270,5 280,15 T300,15 T320,15 Q330,5 340,15 T360,15 Q370,12 380,15 T400,15 Q410,20 420,15 T440,15 Q450,6 460,15 T480,15 Q490,16 500,15 T520,15 Q530,8 540,15 T560,15 Q570,20 580,15 T600,15 Q610,10 620,15 T640,15 Q650,5 660,15 T680,15 Q690,18 700,15 T720,15 Q730,12 740,15 T760,15 Q770,7 780,15 T800,15 Q810,20 820,15 T840,15 Q850,9 860,15 T880,15 Q890,14 900,15 T920,15 Q930,6 940,15 T960,15 Q970,19 980,15 T1000,15 Q1010,11 1020,15 T1040,15 Q1050,5 1060,15 T1080,15 Q1090,17 1100,15 T1120,15 Q1130,8 1140,15 T1160,15 Q1170,13 1180,15 T1200,15 Q1210,20 1220,15 T1240,15 Q1250,7 1260,15 T1280,15 Q1290,16 1300,15 T1320,15 Q1330,10 1340,15 T1360,15 Q1370,5 1380,15 T1400,15 Q1410,18 1420,15 T1440,15 L1440,30 Z" fill="var(--bg-tear)" stroke="none"></path>
+      <path d="M0,0 L0,15 Q10,5 20,15 T40,15 Q50,5 60,15 T80,15 Q90,5 100,15 T120,15 Q130,5 140,15 T160,15 Q170,5 180,15 Q190,5 200,15 T220,15 Q230,5 240,15 T260,15 Q270,5 280,15 T300,15 T320,15 Q330,5 340,15 T360,15 Q370,12 380,15 T400,15 Q410,20 420,15 T440,15 Q450,6 460,15 T480,15 Q490,16 500,15 T520,15 Q530,8 540,15 T560,15 Q570,20 580,15 T600,15 Q610,10 620,15 T640,15 Q650,5 660,15 T680,15 Q690,18 700,15 T720,15 Q730,12 740,15 T760,15 Q770,7 780,15 T800,15 Q810,20 820,15 T840,15 Q850,9 860,15 T880,15 Q890,14 900,15 T920,15 Q930,6 940,15 T960,15 Q970,19 980,15 T1000,15 Q1010,11 1020,15 T1040,15 Q1050,5 1060,15 T1080,15 Q1090,17 1100,15 T1120,15 Q1130,8 1140,15 T1160,15 Q1170,13 1180,15 T1200,15 Q1210,20 1220,15 T1240,15 Q1250,7 1260,15 T1280,15 Q1290,16 1300,15 T1320,15 Q1330,10 1340,15 T1360,15 Q1370,5 1380,15 T1400,15 Q1410,18 1420,15 T1440,15 L1440,0 Z" fill="url(#tear-grid-top)" stroke="none"></path>
+      <path d="M0,15 Q10,5 20,15 T40,15 Q50,5 60,15 T80,15 Q90,5 100,15 T120,15 Q130,5 140,15 T160,15 Q170,5 180,15 Q190,5 200,15 T220,15 Q230,5 240,15 T260,15 Q270,5 280,15 T300,15 T320,15 Q330,5 340,15 T360,15 Q370,12 380,15 T400,15 Q410,20 420,15 T440,15 Q450,6 460,15 T480,15 Q490,16 500,15 T520,15 Q530,8 540,15 T560,15 Q570,20 580,15 T600,15 Q610,10 620,15 T640,15 Q650,5 660,15 T680,15 Q690,18 700,15 T720,15 Q730,12 740,15 T760,15 Q770,7 780,15 T800,15 Q810,20 820,15 T840,15 Q850,9 860,15 T880,15 Q890,14 900,15 T920,15 Q930,6 940,15 T960,15 Q970,19 980,15 T1000,15 Q1010,11 1020,15 T1040,15 Q1050,5 1060,15 T1080,15 Q1090,17 1100,15 T1120,15 Q1130,8 1140,15 T1160,15 Q1170,13 1180,15 T1200,15 Q1210,20 1220,15 T1240,15 Q1250,7 1260,15 T1280,15 Q1290,16 1300,15 T1320,15 Q1330,10 1340,15 T1360,15 Q1370,5 1380,15 T1400,15 Q1410,18 1420,15 T1440,15" fill="none" stroke="var(--border)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <div class="tear-tape-sticker" aria-hidden="true"></div>
+  </div>
+
+  <!-- Page gap spacer -->
+  <div class="page-gap"></div>
+
+  <!-- Bottom paper tear -->
+  <div class="paper-tear paper-tear-bottom">
+    <svg width="100%" height="30" viewBox="0 0 1440 30" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="tear-grid-bottom" width="26" height="26" patternUnits="userSpaceOnUse">
+          <rect width="26" height="26" fill="var(--page-bg)"></rect>
+          <path d="M 26 0 L 0 0 0 26" fill="none" stroke="var(--grid-color)" stroke-width="1.5"></path>
+        </pattern>
+      </defs>
+      <path class="tear-shadow" d="M0,0 L0,15 Q10,5 20,15 T40,15 Q50,5 60,15 T80,15 Q90,5 100,15 T120,15 Q130,5 140,15 T160,15 Q170,5 180,15 Q190,5 200,15 T220,15 Q230,5 240,15 T260,15 Q270,5 280,15 T300,15 T320,15 Q330,5 340,15 T360,15 Q370,12 380,15 T400,15 Q410,20 420,15 T440,15 Q450,6 460,15 T480,15 Q490,16 500,15 T520,15 Q530,8 540,15 T560,15 Q570,20 580,15 T600,15 Q610,10 620,15 T640,15 Q650,5 660,15 T680,15 Q690,18 700,15 T720,15 Q730,12 740,15 T760,15 Q770,7 780,15 T800,15 Q810,20 820,15 T840,15 Q850,9 860,15 T880,15 Q890,14 900,15 T920,15 Q930,6 940,15 T960,15 Q970,19 980,15 T1000,15 Q1010,11 1020,15 T1040,15 Q1050,5 1060,15 T1080,15 Q1090,17 1100,15 T1120,15 Q1130,8 1140,15 T1160,15 Q1170,13 1180,15 T1200,15 Q1210,20 1220,15 T1240,15 Q1250,7 1260,15 T1280,15 Q1290,16 1300,15 T1320,15 Q1330,10 1340,15 T1360,15 Q1370,5 1380,15 T1400,15 Q1410,18 1420,15 T1440,15 L1440,0 Z" fill="var(--bg-tear)" stroke="none"></path>
+      <path d="M0,30 L0,15 Q10,5 20,15 T40,15 Q50,5 60,15 T80,15 Q90,5 100,15 T120,15 Q130,5 140,15 T160,15 Q170,5 180,15 Q190,5 200,15 T220,15 Q230,5 240,15 T260,15 Q270,5 280,15 T300,15 T320,15 Q330,5 340,15 T360,15 Q370,12 380,15 T400,15 Q410,20 420,15 T440,15 Q450,6 460,15 T480,15 Q490,16 500,15 T520,15 Q530,8 540,15 T560,15 Q570,20 580,15 T600,15 Q610,10 620,15 T640,15 Q650,5 660,15 T680,15 Q690,18 700,15 T720,15 Q730,12 740,15 T760,15 Q770,7 780,15 T800,15 Q810,20 820,15 T840,15 Q850,9 860,15 T880,15 Q890,14 900,15 T920,15 Q930,6 940,15 T960,15 Q970,19 980,15 T1000,15 Q1010,11 1020,15 T1040,15 Q1050,5 1060,15 T1080,15 Q1090,17 1100,15 T1120,15 Q1130,8 1140,15 T1160,15 Q1170,13 1180,15 T1200,15 Q1210,20 1220,15 T1240,15 Q1250,7 1260,15 T1280,15 Q1290,16 1300,15 T1320,15 Q1330,10 1340,15 T1360,15 Q1370,5 1380,15 T1400,15 Q1410,18 1420,15 T1440,15 L1440,30 Z" fill="url(#tear-grid-bottom)" stroke="none"></path>
+      <path d="M0,15 Q10,5 20,15 T40,15 Q50,5 60,15 T80,15 Q90,5 100,15 T120,15 Q130,5 140,15 T160,15 Q170,5 180,15 Q190,5 200,15 T220,15 Q230,5 240,15 T260,15 Q270,5 280,15 T300,15 T320,15 Q330,5 340,15 T360,15 Q370,12 380,15 T400,15 Q410,20 420,15 T440,15 Q450,6 460,15 T480,15 Q490,16 500,15 T520,15 Q530,8 540,15 T560,15 Q570,20 580,15 T600,15 Q610,10 620,15 T640,15 Q650,5 660,15 T680,15 Q690,18 700,15 T720,15 Q730,12 740,15 T760,15 Q770,7 780,15 T800,15 Q810,20 820,15 T840,15 Q850,9 860,15 T880,15 Q890,14 900,15 T920,15 Q930,6 940,15 T960,15 Q970,19 980,15 T1000,15 Q1010,11 1020,15 T1040,15 Q1050,5 1060,15 T1080,15 Q1090,17 1100,15 T1120,15 Q1130,8 1140,15 T1160,15 Q1170,13 1180,15 T1200,15 Q1210,20 1220,15 T1240,15 Q1250,7 1260,15 T1280,15 Q1290,16 1300,15 T1320,15 Q1330,10 1340,15 T1360,15 Q1370,5 1380,15 T1400,15 Q1410,18 1420,15 T1440,15" fill="none" stroke="var(--border)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </div>
+
+  <!-- Start second page frame for the rest of the website -->
+  <div class="page-frame second-frame" style="margin-top: 0;">
+
+    <section id="about">
+      <div class="wrap">
+        <span class="tag green">About</span>
+        <div class="card about-card">
+          <p>I'm a <span class="hlx">Computer Science Engineering graduate</span> from Coimbatore, Tamil Nadu, with hands-on experience building software through two internships and two end-to-end projects. My core stack starts with <span class="hlx pink">C++ for problem-solving and fundamentals</span>, followed by <span class="hlx blue">Python and FastAPI</span> on the backend, with a growing command of <span class="hlx green">REST API design</span>, <span class="hlx mint">database management using MySQL and Supabase</span>, and enough frontend basics in <span class="hlx">HTML, CSS, JavaScript, and Figma</span> to ship a feature start to finish.</p>
+          <p>At <span class="hlx">Fnext Solutions</span>, I worked on <span class="hlx pink">responsive web applications and REST API integration</span> alongside senior developers in an agile team. At <span class="hlx blue">Vulture Lines Tech Management</span>, I built REST APIs and dashboards for <span class="hlx green">real-time IoT sensor data</span>, working closely with hardware engineers to bring software and embedded systems together. That experience carried straight into <span class="hlx mint">AgriTwin</span>, a digital twin platform giving farmers real-time monitoring and predictive insights, and <span class="hlx pink">Travel-X</span>, a travel experience-sharing app built with proper authentication and validation middleware.</p>
+          <p>I bring a solid grounding in <span class="hlx blue">system design</span>, <span class="hlx green">data modeling</span>, and <span class="hlx">debugging real production issues</span> plus the habit of learning whatever the next problem needs. I'm actively looking for a full-stack or backend role where I can contribute from day one and keep growing fast.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey-section" id="journey">
+      <!-- Background retro-brutalist designs -->
+      <div class="journey-deco deco-slash" aria-hidden="true">///</div>
+      <div class="journey-deco deco-x" aria-hidden="true">✕</div>
+      <div class="journey-deco deco-plus" aria-hidden="true">＋</div>
+      <div class="journey-deco deco-pointer" aria-hidden="true">⌖</div>
+
+      <div class="wrap">
+        <div class="journey-title-container">
+          <h2 class="journey-title-block">My Journey</h2>
+        </div>
+        <div class="journey-container">
+          <div class="journey-timeline">
+            <h3 class="timeline-header">Journey Timeline</h3>
+            <div class="timeline-list">
+              <div class="timeline-item-flat" id="exp-1" data-location="Fnext Solutions">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content-flat">
+                  <h4 class="timeline-title"><i class="fas fa-laptop-code" style="color: var(--pink); margin-right: 8px;"></i>Web Development Intern @ Fnext Solutions</h4>
+                  <div class="timeline-date">Jun 2025</div>
+                  <p class="timeline-description">Here I moved deeper into frontend and API integration, building responsive web apps with HTML, CSS, and JavaScript alongside senior developers. I picked up real agile habits (daily standups, code reviews) and got hands-on with refactoring and asset optimization to make pages faster and leaner.</p>
+                  <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Puducherry (Remote)</div>
+                </div>
+              </div>
+
+              <div class="timeline-item-flat" id="exp-2" data-location="Vulture Lines">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content-flat">
+                  <h4 class="timeline-title"><i class="fas fa-microchip" style="color: var(--mint); margin-right: 8px;"></i>IoT Engineer Intern @ Vulture Lines Tech Management Pvt Ltd</h4>
+                  <div class="timeline-date">Oct 2024</div>
+                  <p class="timeline-description">This is where I got my first taste of working with real hardware. I designed IoT software for real-time sensor data collection across multiple streaming devices, built REST APIs for device communication, and put together web dashboards for data visualization all while working closely with hardware engineers to make sense of embedded systems.</p>
+                  <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu (Remote)</div>
+                </div>
+              </div>
+
+              <div class="timeline-item-flat" id="exp-3" data-location="KGiSL Institute of Technology">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content-flat">
+                  <h4 class="timeline-title"><i class="fas fa-graduation-cap" style="color: var(--yellow); margin-right: 8px;"></i>B.E. Computer Science Engineering @ KGiSL Institute of Technology</h4>
+                  <div class="timeline-date">2022 – 2026</div>
+                  <p class="timeline-description">My journey started here, building a foundation in system design, data structures, and full-stack development. Four years of coursework and projects shaped how I think about problems, and I graduated with a CGPA of 8.1/10, laying the groundwork for backend-first engineering work.</p>
+                  <div class="timeline-location"><i class="fas fa-map-marker-alt"></i> Coimbatore, Tamil Nadu</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="journey-timeline-back">
+            <svg class="treasure-map-svg" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+              <!-- Aged paper background -->
+              <rect width="400" height="600" fill="#f4e7d7"/>
+
+              <!-- Compass Rose -->
+              <g transform="translate(320, 80)">
+                <circle cx="0" cy="0" r="35" fill="none" stroke="#8B4513" stroke-width="2"/>
+                <circle cx="0" cy="0" r="30" fill="none" stroke="#8B4513" stroke-width="1"/>
+                <!-- N -->
+                <polygon points="0,-30 5,-10 -5,-10" fill="#D2691E"/>
+                <!-- S -->
+                <polygon points="0,30 5,10 -5,10" fill="#8B4513"/>
+                <!-- E -->
+                <polygon points="30,0 10,5 10,-5" fill="#8B4513"/>
+                <!-- W -->
+                <polygon points="-30,0 -10,5 -10,-5" fill="#8B4513"/>
+                <text x="0" y="-40" text-anchor="middle" font-size="16" font-weight="bold" fill="#8B4513">N</text>
+              </g>
+
+              <!-- Dotted path route -->
+              <path d="M 80,150 Q 120,200 100,250 T 140,350 Q 160,400 200,420"
+                    stroke="#D2691E" stroke-width="3" fill="none"
+                    stroke-dasharray="8,8" stroke-linecap="round"/>
+
+              <!-- Location markers -->
+              <circle cx="80" cy="150" r="8" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+              <circle cx="100" cy="250" r="8" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+              <circle cx="140" cy="350" r="8" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+
+              <!-- X marks the spot -->
+              <g transform="translate(200, 420)">
+                <circle cx="0" cy="0" r="25" fill="#FFD700" opacity="0.3"/>
+                <line x1="-15" y1="-15" x2="15" y2="15" stroke="#DC143C" stroke-width="4" stroke-linecap="round"/>
+                <line x1="15" y1="-15" x2="-15" y2="15" stroke="#DC143C" stroke-width="4" stroke-linecap="round"/>
+              </g>
+
+              <!-- Mountains -->
+              <g opacity="0.4">
+                <polygon points="250,200 270,150 290,200" fill="#8B4513"/>
+                <polygon points="280,200 300,160 320,200" fill="#A0522D"/>
+                <polygon points="220,220 245,170 270,220" fill="#8B4513"/>
+              </g>
+
+              <!-- Trees -->
+              <g opacity="0.4">
+                <polygon points="100,450 110,420 120,450" fill="#228B22"/>
+                <rect x="108" y="450" width="4" height="15" fill="#8B4513"/>
+                <polygon points="150,480 160,450 170,480" fill="#228B22"/>
+                <rect x="158" y="480" width="4" height="15" fill="#8B4513"/>
+                <polygon points="70,500 80,470 90,500" fill="#228B22"/>
+                <rect x="78" y="500" width="4" height="15" fill="#8B4513"/>
+              </g>
+
+              <!-- Waves/Water -->
+              <g opacity="0.3">
+                <path d="M 40,300 Q 50,295 60,300 T 80,300" stroke="#4682B4" stroke-width="2" fill="none"/>
+                <path d="M 40,310 Q 50,305 60,310 T 80,310" stroke="#4682B4" stroke-width="2" fill="none"/>
+                <path d="M 280,520 Q 290,515 300,520 T 320,520" stroke="#4682B4" stroke-width="2" fill="none"/>
+                <path d="M 280,530 Q 290,525 300,530 T 320,530" stroke="#4682B4" stroke-width="2" fill="none"/>
+              </g>
+
+              <!-- Decorative border -->
+              <rect x="10" y="10" width="380" height="580" fill="none"
+                    stroke="#8B4513" stroke-width="3" stroke-dasharray="10,5"/>
+            </svg>
+          </div>
+
+          <div class="journey-map-container">
+            <div id="journey-map"></div>
+            <svg class="map-overlay-lines" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+                  <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#000" stroke-width="2" opacity="0.8"/>
+                </pattern>
+                <pattern id="scratches" width="200" height="200" patternUnits="userSpaceOnUse">
+                  <line x1="10" y1="20" x2="60" y2="25" stroke="#000" stroke-width="2" opacity="0.7"/>
+                  <line x1="100" y1="50" x2="180" y2="48" stroke="#000" stroke-width="1.5" opacity="0.6"/>
+                  <line x1="30" y1="120" x2="90" y2="115" stroke="#000" stroke-width="2" opacity="0.7"/>
+                  <line x1="140" y1="160" x2="195" y2="165" stroke="#000" stroke-width="1.5" opacity="0.6"/>
+                  <line x1="5" y1="180" x2="45" y2="175" stroke="#000" stroke-width="1.5" opacity="0.6"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)"/>
+              <rect width="100%" height="100%" fill="url(#scratches)"/>
+            </svg>
+            <div class="map-pirate-overlay-placeholder">
+              <img src="assets/images/profile/avatar_pirate_map_clean.png" alt="Pirate Explorer Logo" class="map-pirate-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <span class="tag yellow">Skills</span>
+        <h2 class="sec-title">What I Work With</h2>
+        <div class="skill-groups">
+
+          <!-- 1. Frontend -->
+          <div class="skill-group">
+            <div class="sg-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="18" rx="2" fill="none" />
+                <line x1="2" y1="8" x2="22" y2="8" />
+                <circle cx="6" cy="5.5" r="0.5" fill="currentColor" />
+                <circle cx="9" cy="5.5" r="0.5" fill="currentColor" />
+                <path class="code-bracket-left" d="M 8 12 L 5 14.5 L 8 17" />
+                <path class="code-bracket-right" d="M 16 12 L 19 14.5 L 16 17" />
+              </svg>
+              <span>Frontend</span>
+            </div>
+            <div class="chips">
+              <span class="chip"><i class="devicon-html5-plain colored"></i>HTML</span>
+              <span class="chip"><i class="devicon-css3-plain colored"></i>CSS</span>
+              <span class="chip"><i class="devicon-react-original colored"></i>React.js</span>
+              <span class="chip"><i class="devicon-angularjs-plain colored"></i>Angular</span>
+              <span class="chip"><i class="devicon-bootstrap-plain colored"></i>Bootstrap</span>
+              <span class="chip"><i class="devicon-materialui-plain colored"></i>Material-UI</span>
+              <span class="chip"><i class="devicon-tailwindcss-plain colored"></i>Tailwind CSS</span>
+              <span class="chip"><i class="devicon-ionic-original colored"></i>Ionic</span>
+              <span class="chip"><i class="devicon-javascript-plain colored"></i>JavaScript DOM</span>
+            </div>
+          </div>
+
+          <!-- 2. Languages -->
+          <div class="skill-group">
+            <div class="sg-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="18" rx="2" fill="none" />
+                <path d="M 7 9 L 10 11.5 L 7 14" />
+                <line class="terminal-cursor" x1="12" y1="14" x2="16" y2="14" />
+              </svg>
+              <span>Languages</span>
+            </div>
+            <div class="chips">
+              <span class="chip"><i class="devicon-c-plain colored"></i>C</span>
+              <span class="chip"><i class="devicon-cplusplus-plain colored"></i>C++</span>
+              <span class="chip"><i class="devicon-python-plain colored"></i>Python</span>
+              <span class="chip"><i class="devicon-java-plain colored"></i>Java</span>
+              <span class="chip"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+            </div>
+          </div>
+
+          <!-- 3. Backend -->
+          <div class="skill-group">
+            <div class="sg-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="7" rx="1" fill="none" />
+                <circle class="server-dot-1" cx="6" cy="6.5" r="1" fill="currentColor" />
+                <line x1="12" y1="6.5" x2="18" y2="6.5" />
+                <rect x="2" y="14" width="20" height="7" rx="1" fill="none" />
+                <circle class="server-dot-2" cx="6" cy="17.5" r="1" fill="currentColor" />
+                <line x1="12" y1="17.5" x2="18" y2="17.5" />
+              </svg>
+              <span>Backend</span>
+            </div>
+            <div class="chips">
+              <span class="chip"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+              <span class="chip"><i class="devicon-express-original" style="filter: invert(1);"></i>Express.js</span>
+              <span class="chip"><i class="devicon-fastapi-plain colored"></i>FastAPI</span>
+              <span class="chip"><i class="devicon-firebase-plain colored"></i>Firebase</span>
+              <span class="chip"><i class="fas fa-network-wired" style="color: #61DAFB;"></i>REST APIs</span>
+            </div>
+          </div>
+
+          <!-- 4. Cloud & DevOps -->
+          <div class="skill-group">
+            <div class="sg-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path class="cloud-path" d="M18 10h-.007A5.5 5.5 0 0 0 7.5 10.5A4.5 4.5 0 0 0 8 19.5h10a4.5 4.5 0 0 0 0-9Z" fill="none" />
+              </svg>
+              <span>Cloud &amp; DevOps</span>
+            </div>
+            <div class="chips">
+              <span class="chip"><i class="devicon-googlecloud-plain colored"></i>Google Cloud</span>
+              <span class="chip"><i class="fab fa-aws" style="color: #FF9900;"></i>AWS</span>
+              <span class="chip"><i class="devicon-docker-plain colored"></i>Docker</span>
+              <span class="chip"><i class="devicon-terraform-plain colored"></i>Terraform</span>
+              <span class="chip"><i class="fab fa-aws" style="color: #FF9900;"></i>AWS Lambda</span>
+              <span class="chip"><i class="fas fa-hdd" style="color: #FFD93D;"></i>AWS S3</span>
+              <span class="chip"><i class="fas fa-cloud" style="color: #5AC8E8;"></i>Cloud Functions</span>
+            </div>
+          </div>
+
+          <!-- 5. Databases -->
+          <div class="skill-group">
+            <div class="sg-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse class="db-disc-top" cx="12" cy="5" rx="9" ry="2.5" fill="none" />
+                <path d="M3 5 V12 A9 2.5 0 0 0 21 12 V5" />
+                <ellipse class="db-disc-mid" cx="12" cy="12" rx="9" ry="2.5" fill="none" />
+                <path d="M3 12 V19 A9 2.5 0 0 0 21 19 V12" />
+                <ellipse class="db-disc-bot" cx="12" cy="19" rx="9" ry="2.5" fill="none" />
+              </svg>
+              <span>Databases</span>
+            </div>
+            <div class="chips">
+              <span class="chip"><i class="devicon-mongodb-plain colored"></i>MongoDB</span>
+              <span class="chip"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span>
+              <span class="chip"><i class="devicon-microsoftsqlserver-plain colored"></i>SQL Server</span>
+              <span class="chip"><i class="devicon-mysql-plain colored"></i>MySQL</span>
+            </div>
+          </div>
+
+          <!-- 6. Tools & More -->
+          <div class="skill-group">
+            <div class="sg-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path class="wrench-tool" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.77 3.77Z" fill="none" />
+              </svg>
+              <span>Tools &amp; More</span>
+            </div>
+            <div class="chips">
+              <span class="chip"><i class="devicon-git-plain colored"></i>Git</span>
+              <span class="chip"><i class="devicon-vscode-plain colored"></i>VSCode</span>
+              <span class="chip"><i class="devicon-unrealengine-plain"></i>Unreal Engine</span>
+              <span class="chip"><i class="devicon-unity-plain"></i>Unity</span>
+              <span class="chip"><i class="devicon-selenium-original colored"></i>Selenium</span>
+              <span class="chip"><i class="devicon-jira-plain colored"></i>Jira</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Architecture & Methodologies Section -->
+        <div class="skills-extra-grid">
+          <!-- Card 1: Architecture -->
+          <div class="skill-extra-card">
+            <div class="extra-card-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect class="arch-node-top" x="9" y="2" width="6" height="5" rx="1" fill="none" />
+                <path d="M12 7 L12 12 M12 12 L5 12 L5 17 M12 12 L19 12 L19 17" />
+                <rect class="arch-node-left" x="2" y="17" width="6" height="5" rx="1" fill="none" />
+                <rect class="arch-node-right" x="16" y="17" width="6" height="5" rx="1" fill="none" />
+              </svg>
+              <span>Architecture</span>
+            </div>
+            <div class="extra-card-divider"></div>
+            <div class="extra-chips">
+              <span class="chip"><i class="fas fa-project-diagram" style="color: #3b82f6; margin-right: 6px;"></i>REST API Design</span>
+              <span class="chip"><i class="fas fa-network-wired" style="color: #10b981; margin-right: 6px;"></i>Client-Server Architecture</span>
+              <span class="chip"><i class="fas fa-database" style="color: #f59e0b; margin-right: 6px;"></i>Relational Database Design</span>
+              <span class="chip"><i class="fas fa-layer-group" style="color: #ec4899; margin-right: 6px;"></i>MVC / Layered Architecture</span>
+              <span class="chip"><i class="fas fa-cubes" style="color: #6366f1; margin-right: 6px;"></i>Monolithic Architecture</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Methodologies -->
+          <div class="skill-extra-card">
+            <div class="extra-card-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="6" y1="3" x2="6" y2="21" />
+                <circle cx="6" cy="6" r="2.5" fill="currentColor" />
+                <circle cx="6" cy="18" r="2.5" fill="currentColor" />
+                <path d="M6 18 A 8 8 0 0 0 16 10" />
+                <circle class="git-branch-node" cx="16" cy="10" r="2.5" fill="none" />
+              </svg>
+              <span>Methodologies</span>
+            </div>
+            <div class="extra-card-divider"></div>
+            <div class="extra-chips">
+              <span class="chip"><i class="fas fa-sync-alt" style="color: #10b981; margin-right: 6px;"></i>Agile</span>
+              <span class="chip"><i class="fab fa-git-alt" style="color: #f05032; margin-right: 6px;"></i>Version Control (Git)</span>
+              <span class="chip"><i class="fas fa-clipboard-check" style="color: #ec4899; margin-right: 6px;"></i>Code Review</span>
+              <span class="chip"><i class="fas fa-bug" style="color: #ef4444; margin-right: 6px;"></i>Debugging & Troubleshooting</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <h2 class="project-section-title">Creator of</h2>
+        
+        <div class="project-neo-grid">
+          <!-- Card 1: AgriTwin -->
+          <div class="project-neo-item" id="project-agritwin">
+            <div class="project-neo-card">
+              <div class="project-neo-icon"><i class="fas fa-seedling"></i></div>
+              <h3 class="project-neo-name">AgriTwin</h3>
+            </div>
+            <p class="project-neo-desc">Digital twin platform for agriculture. Structured data models for crops, soil, weather, and yield analytics, processing real-time data from IoT sensors.</p>
+            <div class="project-neo-btn-row">
+              <a href="https://github.com/Irf4n8/AgriTwin---Digital-twin-for-Agriculture" target="_blank" rel="noopener noreferrer" class="project-neo-btn">
+                <i class="fab fa-github"></i> Check it out
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Travel-X -->
+          <div class="project-neo-item" id="project-travelx">
+            <div class="project-neo-card">
+              <div class="project-neo-icon"><i class="fas fa-globe-americas"></i></div>
+              <h3 class="project-neo-name">Travel-X</h3>
+            </div>
+            <p class="project-neo-desc">Experience-sharing app for travelers. Normalized schemas for users, posts, locations, and metadata, with proper auth and validation middleware.</p>
+            <div class="project-neo-btn-row">
+              <a href="https://github.com/Irf4n8/Experience-Sharing-Application" target="_blank" rel="noopener noreferrer" class="project-neo-btn">
+                <i class="fab fa-github"></i> Check it out
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <span class="tag blue">Background</span>
+        <h2 class="sec-title">Education &amp; Languages</h2>
+        <div class="split-2">
+          <div class="card">
+            <div class="info-row" style="border-top:none;"><span>Degree</span><span>B.E. CSE</span></div>
+            <div class="info-row"><span>Institute</span><span>KGiSL Institute of Technology</span></div>
+            <div class="info-row"><span>Location</span><span>Coimbatore, TN</span></div>
+            <div class="info-row"><span>Duration</span><span>2022 – 2026</span></div>
+            <div class="info-row"><span>CGPA</span><span>8.1 / 10</span></div>
+          </div>
+          <div class="card">
+            <div style="font-family:var(--display); font-weight:700; font-size:13px; text-transform:uppercase; margin-bottom:14px; color:var(--white);">Languages I Speak</div>
+            <div class="chips" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+              <span class="chip">English</span>
+              <span class="chip">Tamil</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-panel">
+          <h2>Let's Talk</h2>
+          <p>Open to full-stack and backend roles. Based in Coimbatore, happy to relocate or work remote.</p>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/mohammedirfan24/" target="_blank" rel="noopener noreferrer" class="contact-note note-blue">
+              <i class="fab fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/Irf4n8" target="_blank" rel="noopener noreferrer" class="contact-note note-yellow">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="mailto:mohammedirfan24082004@gmail.com" class="contact-note note-pink">
+              <i class="fas fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="foot-row">
+          <div>
+            <div class="foot-name">Mohammed Irfan</div>
+            <div class="foot-role">Full Stack Engineer, Fresher</div>
+          </div>
+          <div class="foot-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#journey">Experience</a>
+            <a href="#skills">Skill</a>
+          </div>
+        </div>
+        <div class="foot-bottom">
+          <div class="foot-copy">© 2026 Mohammed Irfan</div>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /.page-frame -->
+
+  <!-- Ink Spill Dark Mode Components -->
+  <canvas id="inkCanvas"></canvas>
+  
+  <button id="inkToggle" class="ink-toggle-btn" aria-label="Toggle dark mode">
+    <svg class="ink-bottle-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Cap of bottle -->
+      <rect x="24" y="6" width="16" height="8" rx="2" fill="currentColor" stroke="black" stroke-width="4.5" />
+      <!-- Bottle neck -->
+      <rect x="28" y="14" width="8" height="6" fill="currentColor" stroke="black" stroke-width="4.5" />
+      <!-- Bottle body -->
+      <path d="M 14 20 L 50 20 L 52 54 L 12 54 Z" fill="currentColor" stroke="black" stroke-width="4.5" stroke-linejoin="round" />
+      <!-- Ink fluid level line inside bottle -->
+      <path class="ink-level" d="M 15 36 Q 32 33 49 36 L 51 51 L 13 51 Z" fill="black" />
+      <!-- Label on bottle -->
+      <rect class="bottle-label" x="22" y="28" width="20" height="12" fill="white" stroke="black" stroke-width="3" />
+      <!-- Small drop/splat icon in the label -->
+      <path d="M 32 30 Q 35 36 32 38 Q 29 36 32 30 Z" fill="black" />
+    </svg>
+  </button>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
